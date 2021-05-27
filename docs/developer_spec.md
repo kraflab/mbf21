@@ -1,6 +1,6 @@
 # MBF21 Developer Spec
 
-The contents of this file are aimed at developers, with links to relevant code and extra technical details.
+The contents of this file are aimed at developers, with links to relevant code and extra technical details. MBF21 supports the full spec of boom & mbf, plus the following.
 
 ## Sectors
 

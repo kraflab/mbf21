@@ -1,5 +1,7 @@
 # MBF21 Specification
 
+MBF21 supports the full spec of boom & mbf, plus the following.
+
 ## Generalized Sector Types
 
 | Dec  | Bit | Description            |
