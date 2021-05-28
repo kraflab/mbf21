@@ -15,8 +15,29 @@ The OPTIONS lump (originally from mbf) allows wad authors to set a series of var
 | player_helpers        | Number of dogs to spawn                                        |
 | friend_distance       | Friendly monsters try to keep at least this distance apart     |
 | dog_jumping           | Dogs can jump down from high ledges                            |
-
-TODO: comp descriptions
+| comp_telefrag         | Spawners only telefrag on Map 30                               |
+| comp_dropoff          | Discourage / prevent enemies from walking off ledges (?)       |
+| comp_vile             | Archviles can create ghosts                                    |
+| comp_pain             | Pain elementals don't spawn lost souls if there are over 20    |
+| comp_skull            | Lost souls can spawn past impassable lines                     |
+| comp_blazing          | Blazing doors have double sounds                               |
+| comp_doorlight        | Door lighting changes are abrupt                               |
+| comp_model            | Assorted physics quirks and bugs                               |
+| comp_god              | God mode is removed in sector 11 & ignored at 1000+ damage     |
+| comp_falloff          | Don't pull monsters off ledges they are hanging off of         |
+| comp_floors           | Assorted floor bugs                                            |
+| comp_skymap           | Don't apply invulnerability palette to skies                   |
+| comp_pursuit          | Monsters can infight immediately when alerted                  |
+| comp_doorstuck        | Monsters get stuck in door tracks                              |
+| comp_staylift         | Monsters don't prefer staying on lifts their target is on      |
+| comp_zombie           | Dead players can activate things                               |
+| comp_stairs           | Assorted stair bugs                                            |
+| comp_infcheat         | ?                                                              |
+| comp_zerotags         | Allow tag zero actions                                         |
+| comp_respawn          | Monsters not spawned at level start respawn at the origin      |
+| comp_soul             | Buggy lost soul bouncing                                       |
+| comp_ledgeblock       | Monsters are blocked by ledges (except when scrolling)         |
+| comp_friendlyspawn    | Spawned things inherit the friend attribute from the source    |
 
 ### MBF21 Defaults
 
