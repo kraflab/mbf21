@@ -1,8 +1,22 @@
 # MBF21 OPTIONS Lump
 
-The OPTIONS lump (originally from mbf) allows wad authors to set a series of flags that affect engine behaviour. This file contains examples you can use to approximate old environments.
+The OPTIONS lump (originally from mbf) allows wad authors to set a series of variables that affect engine behaviour. This file contains descriptions of the options as well as examples you can use to approximate old environments.
 
-TODO: field by field explanations.
+| Key                   | Description                                                    |
+|-----------------------|----------------------------------------------------------------|
+| weapon_recoil         | Firing a weapon pushes the player back                         |
+| monsters_remember     | Friendly monsters return to old target when losing current one |
+| monster_infighting    | Monsters infight                                               |
+| monster_backing       | Ranged monsters will back away from close melee targets        |
+| monster_avoid_hazards | Monsters avoid hazards such as crushing ceilings               |
+| monkeys               | Monsters can jump down from high ledges                        |
+| monster_friction      | Monsters are affected by friction modifiers                    |
+| help_friends          | Friendly monsters prefer targets of friends                    |
+| player_helpers        | Number of dogs to spawn                                        |
+| friend_distance       | Friendly monsters try to keep at least this distance apart     |
+| dog_jumping           | Dogs can jump down from high ledges                            |
+
+TODO: comp descriptions
 
 ### MBF21 Defaults
 
