@@ -211,8 +211,8 @@ MBF21 defaults:
 #### New "Args" fields for DEHACKED states
 - Defines 8 new integer fields in the state table for use as codepointer arguments
 - Args are defined in dehacked by adding `Args1 = X`, `Args2 = X`... up to `Args8 = X` in the State definition.
-- Default value for every arg is 0
-- For future-proofing, if more nonzero args are defined on a state than its action pointer expects (e.g. defining Args3 on a state that uses A_WeaponSound), an error will be thrown on startup.
+- Default value for each arg is determined by the frame's codepointer. See docs below.
+- For future-proofing, if args are defined on a state than its action pointer expects (e.g. defining Args3 on a state that uses A_WeaponSound), an error will be thrown on startup.
 
 #### New DEHACKED Codepointers
 - All new MBF21 pointers use the new "Args" fields for params, rather than misc1/misc2 fields
