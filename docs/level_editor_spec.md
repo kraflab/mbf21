@@ -1,4 +1,4 @@
-# MBF21 Level Editing Spec
+# MBF21 Level Editing Spec v1.0
 
 This file outlines the changes that MBF21 introduces on top of the Boom spec for level editing. This file does not include the changes to things, weapons, code pointers, etc.
 

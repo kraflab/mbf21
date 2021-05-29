@@ -1,4 +1,4 @@
-# MBF21 Specification
+# MBF21 Specification v1.0
 
 MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -303,7 +303,7 @@ MBF21 defaults:
   - Searches for a valid tracer (seek target), if the calling actor doesn't already have one. Particularly useful for player missiles.
   - Args:
     - `fov (fixed)`: Field-of-view, relative to calling actor's angle, to search for targets in. If zero, the search will occur in all directions.
-    - `rangeblocks (uint)`: Distance to search, in map blocks (128 units); if not set, defaults to 10. 
+    - `rangeblocks (uint)`: Distance to search, in map blocks (128 units); if not set, defaults to 10.
   - Notes:
     - Setting the `rangeblocks` arg too high may hurt performance, so don't get overzealous.
     - This function will no-op if the calling actor already has a tracer. To forcibly re-acquire a new tracer, call A_ClearTracer first.
