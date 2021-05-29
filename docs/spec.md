@@ -37,11 +37,13 @@ From the boom spec, type 255 is defined like so:
 >
 > For simplicity, a static scroller is provided that scrolls the first sidedef of a linedef, based on its x- and y- offsets. No tag is used. The x offset controls the rate of horizontal scrolling, 1 unit per frame per x offset, and the y offset controls the rate of vertical scrolling, 1 unit per frame per y offset.
 
-MBF21 has 3 types which operate like type 255, but where the special line determines the speed / direction with which all tagged lines scroll.
+MBF21 has 3 types which operate like type 255, but also apply the scroll to all other linedefs which share the same tag.
 
 - 1024 is the standard scroller.
 - 1025 is the displacement scroller variant.
 - 1026 is the accelerative scroller variant.
+
+To use in a map, set the special on a control linedef, set its x and y offsets as desired to set the scroll speed, assign it a tag, and set the same tag on any destination linedefs to apply the scroll. The x and y offsets of destination linedefs do not factor into the scroll speed, so it's possible to do proper texture alignment.
 
 The displacement scroller, as defined in the boom spec:
 

@@ -31,7 +31,7 @@ The contents of this file are aimed at developers, with links to relevant code a
 
 #### Line scroll special variants
 - [PR](https://github.com/kraflab/dsda-doom/pull/29)
-- Scroll like special 255, but the special line determines the speed / direction with which all tagged lines scroll.
+- Scroll like special 255, but also apply the scroll to all other linedefs which share the same tag.
 - 1024 is without control sector / acceleration.
 - 1025 uses control sector.
 - 1026 uses control sector + acceleration.
