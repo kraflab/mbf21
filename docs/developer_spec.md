@@ -206,7 +206,7 @@ MBF21 defaults:
 - Defines 8 new integer fields in the state table for use as codepointer arguments
 - Args are defined in dehacked by adding `Args1 = X`, `Args2 = X`... up to `Args8 = X` in the State definition.
 - Default value for each arg is determined by the frame's codepointer. For ease of implementation, DEHACKED tools may wish to simply pass through any args that are explicitly set by the user (i.e. assume the default value is undefined).
-- For future-proofing, if args are defined on a state than its action pointer expects (e.g. defining Args3 on a state that uses A_WeaponSound), an error will be thrown on startup.
+- For future-proofing, if args are defined on a state than its action pointer expects (e.g. defining Args3 on a state that uses A_WeaponSound), an error must be thrown on startup.
 
 #### New DEHACKED Codepointers
 - [PR](https://github.com/kraflab/dsda-doom/pull/20), [PR](https://github.com/kraflab/dsda-doom/pull/38), [PR](https://github.com/kraflab/dsda-doom/pull/40), [PR](https://github.com/kraflab/dsda-doom/pull/41), [PR](https://github.com/kraflab/dsda-doom/pull/45), [PR](https://github.com/kraflab/dsda-doom/pull/49)
