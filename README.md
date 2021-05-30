@@ -1,4 +1,4 @@
-# Modder's Best Friend aka MBF21 v1.0
+# Modder's Best Friend aka MBF21 v1.1
 MBF21 is the next step in the classical / conservative feature progression from doom to boom to mbf. The project has these goals:
 
 - Fix bugs and miscellaneous issues in mbf.
@@ -16,6 +16,12 @@ The specification is available in different formats to suit different audiences:
 - Specification for [developers](./docs/developer_spec.md).
 - Specification for [level editors](./docs/level_editor_spec.md).
 - OPTIONS lump [examples](./docs/options.md).
+
+### Version History
+- v1.1
+  - Scrolling specials 1024-1026 now divide the offsets by 8 when calculating the speed, to allow for more fine-grained control.
+- v1.0
+  - Original release
 
 ##### About the Project
 The formal effort officially began in [March 2021](https://www.doomworld.com/forum/topic/120616-lets-talk-about-mbf-a-new-complevel/). Following extensive discussions and investigations, kraflab and Xaser delivered the first implementation of the specification in [dsda-doom](https://github.com/kraflab/dsda-doom) two months later.

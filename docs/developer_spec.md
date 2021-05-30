@@ -1,4 +1,4 @@
-# MBF21 Developer Spec v1.0
+# MBF21 Developer Spec v1.1
 
 The contents of this file are aimed at developers, with links to relevant code and extra technical details. MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -32,6 +32,7 @@ The contents of this file are aimed at developers, with links to relevant code a
 #### Line scroll special variants
 - [PR](https://github.com/kraflab/dsda-doom/pull/29)
 - Scroll like special 255, but also apply the scroll to all other linedefs which share the same tag.
+- The scrolling speed is divided by 8 to give more fine-grained control.
 - 1024 is without control sector / acceleration.
 - 1025 uses control sector.
 - 1026 uses control sector + acceleration.

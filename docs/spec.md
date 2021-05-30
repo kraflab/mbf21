@@ -1,4 +1,4 @@
-# MBF21 Specification v1.0
+# MBF21 Specification v1.1
 
 MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -37,7 +37,7 @@ From the boom spec, type 255 is defined like so:
 >
 > For simplicity, a static scroller is provided that scrolls the first sidedef of a linedef, based on its x- and y- offsets. No tag is used. The x offset controls the rate of horizontal scrolling, 1 unit per frame per x offset, and the y offset controls the rate of vertical scrolling, 1 unit per frame per y offset.
 
-MBF21 has 3 types which operate like type 255, but also apply the scroll to all other linedefs which share the same tag.
+MBF21 has 3 types which operate like type 255, but also apply the scroll to all other linedefs which share the same tag. Additionally, the scrolling speed is divided by 8 in order to give more fine-grained control.
 
 - 1024 is the standard scroller.
 - 1025 is the displacement scroller variant.

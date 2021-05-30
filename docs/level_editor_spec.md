@@ -1,4 +1,4 @@
-# MBF21 Level Editing Spec v1.0
+# MBF21 Level Editing Spec v1.1
 
 This file outlines the changes that MBF21 introduces on top of the Boom spec for level editing. This file does not include the changes to things, weapons, code pointers, etc.
 
@@ -37,7 +37,7 @@ From the boom spec, type 255 is defined like so:
 >
 > For simplicity, a static scroller is provided that scrolls the first sidedef of a linedef, based on its x- and y- offsets. No tag is used. The x offset controls the rate of horizontal scrolling, 1 unit per frame per x offset, and the y offset controls the rate of vertical scrolling, 1 unit per frame per y offset.
 
-MBF21 has 3 types which operate like type 255, but also apply the scroll to all other linedefs which share the same tag. The x and y offsets of "destination" linedefs do not factor into the scroll speed.
+MBF21 has 3 types which operate like type 255, but also apply the scroll to all other linedefs which share the same tag. The x and y offsets of "destination" linedefs do not factor into the scroll speed. Additionally, the scrolling speed is divided by 8 in order to give more fine-grained control.
 
 - 1024 is the standard scroller.
 - 1025 is the displacement scroller variant.
