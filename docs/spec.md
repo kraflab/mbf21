@@ -127,6 +127,7 @@ In this example:
 | E4M6BOSS       | E4M6 boss (cyberdemon)                                                                         |
 | E4M8BOSS       | E4M8 boss (mastermind)                                                                         |
 | RIP            | Ripper projectile (does not disappear on impact)                                               |
+| FULLVOLSOUNDS  | Full volume see / death sounds                                                                 |
 
 #### Rip sound
 - When set, this is the sound that plays for ripper projectiles when they rip through something.

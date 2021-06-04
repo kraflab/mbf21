@@ -18,6 +18,8 @@ The specification is available in different formats to suit different audiences:
 - OPTIONS lump [examples](./docs/options.md).
 
 ### Version History
+- v1.2
+  - Added FULLVOLSOUNDS thing flag, which uses full volume for the see / death sounds.
 - v1.1
   - Scrolling specials 1024-1026 now divide the offsets by 8 when calculating the speed, to allow for more fine-grained control.
 - v1.0
