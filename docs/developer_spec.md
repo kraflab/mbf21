@@ -92,29 +92,30 @@ In this example:
 - Add `MBF21 Bits = X` in the Thing definition.
 - The format is the same as the existing `Bits` field.
 - Example: `MBF21 Bits = LOGRAV+DMGIGNORED+MAP07BOSS1`.
+- The value can also be given as a number (sum of the individual flag values below).
 - Implementations match between DSDA-Doom and Eternity Engine for labeled flags.
 
-| DSDA-Doom          | Eternity Engine    | Description                                                                                    |
-|--------------------|--------------------|------------------------------------------------------------------------------------------------|
-| MF2_LOGRAV         | MF2_LOGRAV         | Lower gravity (1/8)                                                                            |
-| MF2_SHORTMRANGE    | MF2_SHORTMRANGE    | Short missile range (archvile)                                                                 |
-| MF2_DMGIGNORED     | MF3_DMGIGNORED     | Other things ignore its attacks (archvile)                                                     |
-| MF2_NORADIUSDMG    | MF4_NORADIUSDMG    | Doesn't take splash damage (cyberdemon, mastermind)                                            |
-| MF2_FORCERADIUSDMG | MF4_FORCERADIUSDMG | Thing causes splash damage even if the target shouldn't                                        |
-| MF2_HIGHERMPROB    | MF2_HIGHERMPROB    | Higher missile attack probability (cyberdemon)                                                 |
-| MF2_RANGEHALF      | MF2_RANGEHALF      | Use half distance for missile attack probability (cyberdemon, mastermind, revenant, lost soul) |
-| MF2_NOTHRESHOLD    | MF3_NOTHRESHOLD    | Has no targeting threshold (archvile)                                                          |
-| MF2_LONGMELEE      | MF2_LONGMELEE      | Has long melee range (revenant)                                                                |
-| MF2_BOSS           | MF2_BOSS           | Full volume see / death sound & splash immunity (cyberdemon, mastermind)                       |
-| MF2_MAP07BOSS1     | MF2_MAP07BOSS1     | Tag 666 "boss" on doom 2 map 7 (mancubus)                                                      |
-| MF2_MAP07BOSS2     | MF2_MAP07BOSS2     | Tag 667 "boss" on doom 2 map 7 (arachnotron)                                                   |
-| MF2_E1M8BOSS       | MF2_E1M8BOSS       | E1M8 boss (baron)                                                                              |
-| MF2_E2M8BOSS       | MF2_E2M8BOSS       | E2M8 boss (cyberdemon)                                                                         |
-| MF2_E3M8BOSS       | MF2_E3M8BOSS       | E3M8 boss (mastermind)                                                                         |
-| MF2_E4M6BOSS       | MF2_E4M6BOSS       | E4M6 boss (cyberdemon)                                                                         |
-| MF2_E4M8BOSS       | MF2_E4M8BOSS       | E4M8 boss (mastermind)                                                                         |
-| MF2_RIP            | MF3_RIP            | Ripper projectile (does not disappear on impact)                                               |
-| MF2_FULLVOLSOUNDS  |                    | Full volume see / death sounds                                                                 |
+| DSDA-Doom          | Eternity Engine    | Value   | Description                                                                                    |
+|--------------------|--------------------|---------|------------------------------------------------------------------------------------------------|
+| MF2_LOGRAV         | MF2_LOGRAV         | 0x00001 | Lower gravity (1/8)                                                                            |
+| MF2_SHORTMRANGE    | MF2_SHORTMRANGE    | 0x00002 | Short missile range (archvile)                                                                 |
+| MF2_DMGIGNORED     | MF3_DMGIGNORED     | 0x00004 | Other things ignore its attacks (archvile)                                                     |
+| MF2_NORADIUSDMG    | MF4_NORADIUSDMG    | 0x00008 | Doesn't take splash damage (cyberdemon, mastermind)                                            |
+| MF2_FORCERADIUSDMG | MF4_FORCERADIUSDMG | 0x00010 | Thing causes splash damage even if the target shouldn't                                        |
+| MF2_HIGHERMPROB    | MF2_HIGHERMPROB    | 0x00020 | Higher missile attack probability (cyberdemon)                                                 |
+| MF2_RANGEHALF      | MF2_RANGEHALF      | 0x00040 | Use half distance for missile attack probability (cyberdemon, mastermind, revenant, lost soul) |
+| MF2_NOTHRESHOLD    | MF3_NOTHRESHOLD    | 0x00080 | Has no targeting threshold (archvile)                                                          |
+| MF2_LONGMELEE      | MF2_LONGMELEE      | 0x00100 | Has long melee range (revenant)                                                                |
+| MF2_BOSS           | MF2_BOSS           | 0x00200 | Full volume see / death sound & splash immunity (from heretic)                                 |
+| MF2_MAP07BOSS1     | MF2_MAP07BOSS1     | 0x00400 | Tag 666 "boss" on doom 2 map 7 (mancubus)                                                      |
+| MF2_MAP07BOSS2     | MF2_MAP07BOSS2     | 0x00800 | Tag 667 "boss" on doom 2 map 7 (arachnotron)                                                   |
+| MF2_E1M8BOSS       | MF2_E1M8BOSS       | 0x01000 | E1M8 boss (baron)                                                                              |
+| MF2_E2M8BOSS       | MF2_E2M8BOSS       | 0x02000 | E2M8 boss (cyberdemon)                                                                         |
+| MF2_E3M8BOSS       | MF2_E3M8BOSS       | 0x04000 | E3M8 boss (mastermind)                                                                         |
+| MF2_E4M6BOSS       | MF2_E4M6BOSS       | 0x08000 | E4M6 boss (cyberdemon)                                                                         |
+| MF2_E4M8BOSS       | MF2_E4M8BOSS       | 0x10000 | E4M8 boss (mastermind)                                                                         |
+| MF2_RIP            | MF3_RIP            | 0x20000 | Ripper projectile (does not disappear on impact)                                               |
+| MF2_FULLVOLSOUNDS  |                    | 0x40000 | Full volume see / death sounds (cyberdemon, mastermind)                                        |
 
 #### Rip sound
 - [commit](https://github.com/kraflab/dsda-doom/commit/3d9fc1cccc7b85c527331e74802dd25d94a80b10)
@@ -143,15 +144,16 @@ In this example:
 - Add `MBF21 Bits = X` in the Weapon definition.
 - The format is the same as the existing thing `Bits` field.
 - Example: `MBF21 Bits = SILENT+NOAUTOFIRE`.
+- The value can also be given as a number (sum of the individual flag values below).
 
-| Name           | Description                                      |
-|----------------|--------------------------------------------------|
-| NOTHRUST       | Doesn't thrust things                            |
-| SILENT         | Weapon is silent                                 |
-| NOAUTOFIRE     | Weapon won't autofire when swapped to            |
-| FLEEMELEE      | Monsters consider it a melee weapon              |
-| AUTOSWITCHFROM | Can be switched away from when ammo is picked up |
-| NOAUTOSWITCHTO | Cannot be switched to when ammo is picked up     |
+| Name           | Value | Description                                      |
+|----------------|-------|--------------------------------------------------|
+| NOTHRUST       | 0x001 | Doesn't thrust things                            |
+| SILENT         | 0x002 | Weapon is silent                                 |
+| NOAUTOFIRE     | 0x004 | Weapon won't autofire when swapped to            |
+| FLEEMELEE      | 0x008 | Monsters consider it a melee weapon              |
+| AUTOSWITCHFROM | 0x010 | Can be switched away from when ammo is picked up |
+| NOAUTOSWITCHTO | 0x020 | Cannot be switched to when ammo is picked up     |
 
 MBF21 defaults:
 
@@ -198,10 +200,11 @@ MBF21 defaults:
 - Add `MBF21 Bits = X` in the Frame definition.
 - The format is the same as the existing thing `Bits` field.
 - Example: `MBF21 Bits = SKILL5FAST`.
+- The value can also be given as a number (sum of the individual flag values below).
 
-| Name       | Description                           |
-|------------|---------------------------------------|
-| SKILL5FAST | Tics halve on nightmare skill (demon) |
+| Name       | Value | Description                           |
+|------------|-------|---------------------------------------|
+| SKILL5FAST | 0x001 | Tics halve on nightmare skill (demon) |
 
 #### New "Args" fields for DEHACKED states
 - [PR](https://github.com/kraflab/dsda-doom/pull/30)

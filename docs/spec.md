@@ -106,28 +106,29 @@ In this example:
 - Add `MBF21 Bits = X` in the Thing definition.
 - The format is the same as the existing `Bits` field.
 - Example: `MBF21 Bits = LOGRAV+DMGIGNORED+MAP07BOSS1`.
+- The value can also be given as a number (sum of the individual flag values below).
 
-| Flag           | Description                                                                                    |
-|----------------|------------------------------------------------------------------------------------------------|
-| LOGRAV         | Lower gravity (1/8)                                                                            |
-| SHORTMRANGE    | Short missile range (archvile)                                                                 |
-| DMGIGNORED     | Other things ignore its attacks (archvile)                                                     |
-| NORADIUSDMG    | Doesn't take splash damage (cyberdemon, mastermind)                                            |
-| FORCERADIUSDMG | Thing causes splash damage even if the target shouldn't                                        |
-| HIGHERMPROB    | Higher missile attack probability (cyberdemon)                                                 |
-| RANGEHALF      | Use half distance for missile attack probability (cyberdemon, mastermind, revenant, lost soul) |
-| NOTHRESHOLD    | Has no targeting threshold (archvile)                                                          |
-| LONGMELEE      | Has long melee range (revenant)                                                                |
-| BOSS           | Full volume see / death sound & splash immunity (cyberdemon, mastermind)                       |
-| MAP07BOSS1     | Tag 666 "boss" on doom 2 map 7 (mancubus)                                                      |
-| MAP07BOSS2     | Tag 667 "boss" on doom 2 map 7 (arachnotron)                                                   |
-| E1M8BOSS       | E1M8 boss (baron)                                                                              |
-| E2M8BOSS       | E2M8 boss (cyberdemon)                                                                         |
-| E3M8BOSS       | E3M8 boss (mastermind)                                                                         |
-| E4M6BOSS       | E4M6 boss (cyberdemon)                                                                         |
-| E4M8BOSS       | E4M8 boss (mastermind)                                                                         |
-| RIP            | Ripper projectile (does not disappear on impact)                                               |
-| FULLVOLSOUNDS  | Full volume see / death sounds                                                                 |
+| Flag           | Value   | Description                                                                                    |
+|----------------|---------|------------------------------------------------------------------------------------------------|
+| LOGRAV         | 0x00001 | Lower gravity (1/8)                                                                            |
+| SHORTMRANGE    | 0x00002 | Short missile range (archvile)                                                                 |
+| DMGIGNORED     | 0x00004 | Other things ignore its attacks (archvile)                                                     |
+| NORADIUSDMG    | 0x00008 | Doesn't take splash damage (cyberdemon, mastermind)                                            |
+| FORCERADIUSDMG | 0x00010 | Thing causes splash damage even if the target shouldn't                                        |
+| HIGHERMPROB    | 0x00020 | Higher missile attack probability (cyberdemon)                                                 |
+| RANGEHALF      | 0x00040 | Use half distance for missile attack probability (cyberdemon, mastermind, revenant, lost soul) |
+| NOTHRESHOLD    | 0x00080 | Has no targeting threshold (archvile)                                                          |
+| LONGMELEE      | 0x00100 | Has long melee range (revenant)                                                                |
+| BOSS           | 0x00200 | Full volume see / death sound & splash immunity (from heretic)                                 |
+| MAP07BOSS1     | 0x00400 | Tag 666 "boss" on doom 2 map 7 (mancubus)                                                      |
+| MAP07BOSS2     | 0x00800 | Tag 667 "boss" on doom 2 map 7 (arachnotron)                                                   |
+| E1M8BOSS       | 0x01000 | E1M8 boss (baron)                                                                              |
+| E2M8BOSS       | 0x02000 | E2M8 boss (cyberdemon)                                                                         |
+| E3M8BOSS       | 0x04000 | E3M8 boss (mastermind)                                                                         |
+| E4M6BOSS       | 0x08000 | E4M6 boss (cyberdemon)                                                                         |
+| E4M8BOSS       | 0x10000 | E4M8 boss (mastermind)                                                                         |
+| RIP            | 0x20000 | Ripper projectile (does not disappear on impact)                                               |
+| FULLVOLSOUNDS  | 0x40000 | Full volume see / death sounds (cyberdemon, mastermind)                                        |
 
 #### Rip sound
 - When set, this is the sound that plays for ripper projectiles when they rip through something.
@@ -152,15 +153,16 @@ In this example:
 - Add `MBF21 Bits = X` in the Weapon definition.
 - The format is the same as the existing thing `Bits` field.
 - Example: `MBF21 Bits = SILENT+NOAUTOFIRE`.
+- The value can also be given as a number (sum of the individual flag values below).
 
-| Name           | Description                                      |
-|----------------|--------------------------------------------------|
-| NOTHRUST       | Doesn't thrust things                            |
-| SILENT         | Weapon is silent                                 |
-| NOAUTOFIRE     | Weapon won't autofire when swapped to            |
-| FLEEMELEE      | Monsters consider it a melee weapon              |
-| AUTOSWITCHFROM | Can be switched away from when ammo is picked up |
-| NOAUTOSWITCHTO | Cannot be switched to when ammo is picked up     |
+| Name           | Value | Description                                      |
+|----------------|-------|--------------------------------------------------|
+| NOTHRUST       | 0x001 | Doesn't thrust things                            |
+| SILENT         | 0x002 | Weapon is silent                                 |
+| NOAUTOFIRE     | 0x004 | Weapon won't autofire when swapped to            |
+| FLEEMELEE      | 0x008 | Monsters consider it a melee weapon              |
+| AUTOSWITCHFROM | 0x010 | Can be switched away from when ammo is picked up |
+| NOAUTOSWITCHTO | 0x020 | Cannot be switched to when ammo is picked up     |
 
 MBF21 defaults:
 
@@ -204,10 +206,11 @@ MBF21 defaults:
 - Add `MBF21 Bits = X` in the Frame definition.
 - The format is the same as the existing thing `Bits` field.
 - Example: `MBF21 Bits = SKILL5FAST`.
+- The value can also be given as a number (sum of the individual flag values below).
 
-| Name       | Description                           |
-|------------|---------------------------------------|
-| SKILL5FAST | Tics halve on nightmare skill (demon) |
+| Name       | Value | Description                           |
+|------------|-------|---------------------------------------|
+| SKILL5FAST | 0x001 | Tics halve on nightmare skill (demon) |
 
 #### New "Args" fields for DEHACKED states
 - Defines 8 new integer fields in the state table for use as codepointer arguments
