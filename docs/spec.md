@@ -1,4 +1,4 @@
-# MBF21 Specification v1.1
+# MBF21 Specification v1.2
 
 MBF21 supports the full spec of boom & mbf, plus the following.
 

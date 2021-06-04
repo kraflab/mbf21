@@ -1,4 +1,4 @@
-# MBF21 Developer Spec v1.1
+# MBF21 Developer Spec v1.2
 
 The contents of this file are aimed at developers, with links to relevant code and extra technical details. MBF21 supports the full spec of boom & mbf, plus the following.
 
