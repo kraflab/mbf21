@@ -9,7 +9,7 @@ The OPTIONS lump (originally from mbf) allows wad authors to set a series of var
 | monster_infighting    | Monsters infight                                               |
 | monster_backing       | Ranged monsters will back away from close melee targets        |
 | monster_avoid_hazards | Monsters avoid hazards such as crushing ceilings               |
-| monkeys               | Monsters can jump down from high ledges                        |
+| monkeys               | Monsters can climb steep stairs                                |
 | monster_friction      | Monsters are affected by friction modifiers                    |
 | help_friends          | Friendly monsters prefer targets of friends                    |
 | player_helpers        | Number of dogs to spawn                                        |
