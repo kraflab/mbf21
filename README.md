@@ -1,4 +1,4 @@
-# Modder's Best Friend aka MBF21 v1.1
+# Modder's Best Friend aka MBF21 v1.2
 MBF21 is the next step in the classical / conservative feature progression from doom to boom to mbf. The project has these goals:
 
 - Fix bugs and miscellaneous issues in mbf.
