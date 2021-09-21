@@ -1,4 +1,4 @@
-# MBF21 Specification v1.2
+# MBF21 Specification v1.3
 
 MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -466,6 +466,9 @@ MBF21 defaults:
 - comp_friendlyspawn:
   - When on (default): A_Spawn new thing inherits friend flag from source thing.
   - When off: A_Spawn new thing keeps its default friend flag.
+- comp_voodooscroller:
+  - When on: voodoo dolls on slow scrollers move too slowly
+  - When off (default): voodoo dolls move the same speed as the floor
 
 #### Option default changes
 - comp_pursuit: 1 (was 0)

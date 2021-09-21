@@ -38,6 +38,7 @@ The OPTIONS lump (originally from mbf) allows wad authors to set a series of var
 | comp_soul             | Buggy lost soul bouncing                                       |
 | comp_ledgeblock       | Monsters are blocked by ledges (except when scrolling)         |
 | comp_friendlyspawn    | Spawned things inherit the friend attribute from the source    |
+| comp_voodooscroller   | Voodoo dolls on slow scrollers move too slowly                 |
 
 ### MBF21 Defaults
 
@@ -79,6 +80,7 @@ comp_respawn 0
 comp_soul 0
 comp_ledgeblock 1
 comp_friendlyspawn 1
+comp_voodooscroller 0
 ```
 
 ### MBF Defaults
@@ -120,6 +122,7 @@ comp_respawn 1
 comp_soul 1
 comp_ledgeblock 0
 comp_friendlyspawn 1
+comp_voodooscroller 1
 ```
 
 ### Boom
@@ -161,6 +164,7 @@ comp_respawn 1
 comp_soul 1
 comp_ledgeblock 0
 comp_friendlyspawn 1
+comp_voodooscroller 0
 ```
 
 ### Doom 2
@@ -202,6 +206,7 @@ comp_respawn 1
 comp_soul 1
 comp_ledgeblock 1
 comp_friendlyspawn 1
+comp_voodooscroller 0
 ```
 
 ### Ultimate Doom
@@ -243,4 +248,5 @@ comp_respawn 1
 comp_soul 1
 comp_ledgeblock 1
 comp_friendlyspawn 1
+comp_voodooscroller 0
 ```

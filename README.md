@@ -1,4 +1,4 @@
-# Modder's Best Friend aka MBF21 v1.2
+# Modder's Best Friend aka MBF21 v1.3
 MBF21 is the next step in the classical / conservative feature progression from doom to boom to mbf. The project has these goals:
 
 - Fix bugs and miscellaneous issues in mbf.
@@ -18,6 +18,8 @@ The specification is available in different formats to suit different audiences:
 - OPTIONS lump [examples](./docs/options.md).
 
 ### Version History
+- v1.3
+  - Added comp_voodooscroller option (fix voodoo doll speed on slow scrollers).
 - v1.2
   - Added FULLVOLSOUNDS thing flag, which uses full volume for the see / death sounds.
 - v1.1
