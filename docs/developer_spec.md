@@ -1,4 +1,4 @@
-# MBF21 Developer Spec v1.2
+# MBF21 Developer Spec v1.3
 
 The contents of this file are aimed at developers, with links to relevant code and extra technical details. MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -481,22 +481,26 @@ MBF21 defaults:
 - comp_friendlyspawn: [PR](https://github.com/kraflab/dsda-doom/pull/34)
   - When on: A_Spawn new thing inherits friend flag from source thing.
   - When off: A_Spawn new thing keeps its default friend flag.
+- comp_voodooscroller: [PR](https://github.com/kraflab/dsda-doom/pull/81)
+  - When on: voodoo dolls on slow scrollers move too slowly
+  - When off: voodoo dolls move the same speed as the floor
 
 Summary of comp flags since mbf in pr+ and changes:
 
-| Name               | Index | Default | Description                                   |
-|--------------------|-------|---------|-----------------------------------------------|
-| comp_moveblock-    | 19    | 0       | Large negative displacements are mishandled   |
-| comp_respawn*      | 20    | 0       | Creatures with no spawnpoint respawn at (0,0) |
-| comp_sound-        | 21    | 0       | Assorted sound errors                         |
-| comp_666-          | 22    | 0       | Buggy pre-udoom boss checks                   |
-| comp_soul*         | 23    | 0       | Lost souls do not bounce                      |
-| comp_maskedanim-   | 24    | 0       | Two-sided midtextures don't animate           |
-| comp_ouchface-     | 25    | 0       | Buggy vanilla ouchface code                   |
-| comp_maxhealth-    | 26    | 0       | Max health in deh only applies to potions     |
-| comp_translucency- | 27    | 0       | Disable some predefined translucency          |
-| comp_ledgeblock    | 28    | 1       | Ledges block ground enemies                   |
-| comp_friendlyspawn | 29    | 1       | A_Spawn new thing inherits friendliness       |
+| Name                | Index | Default | Description                                    |
+|---------------------|-------|---------|------------------------------------------------|
+| comp_moveblock-     | 19    | 0       | Large negative displacements are mishandled    |
+| comp_respawn*       | 20    | 0       | Creatures with no spawnpoint respawn at (0,0)  |
+| comp_sound-         | 21    | 0       | Assorted sound errors                          |
+| comp_666-           | 22    | 0       | Buggy pre-udoom boss checks                    |
+| comp_soul*          | 23    | 0       | Lost souls do not bounce                       |
+| comp_maskedanim-    | 24    | 0       | Two-sided midtextures don't animate            |
+| comp_ouchface-      | 25    | 0       | Buggy vanilla ouchface code                    |
+| comp_maxhealth-     | 26    | 0       | Max health in deh only applies to potions      |
+| comp_translucency-  | 27    | 0       | Disable some predefined translucency           |
+| comp_ledgeblock     | 28    | 1       | Ledges block ground enemies                    |
+| comp_friendlyspawn  | 29    | 1       | A_Spawn new thing inherits friendliness        |
+| comp_voodooscroller | 30    | 0       | Voodoo dolls on slow scrollers move too slowly |
 
 - Comp options marked with a `-` have been deoptionalized in mbf21 (forced to `0`). Many of these have nothing to do with demo compatibility - others are simple bug fixes.
 - Comp options marked with a `*` are already implemented in EE.
@@ -538,7 +542,7 @@ Summary of comp flags since mbf in pr+ and changes:
 | help_friends          | 1     |
 | dog_jumping           | 1     |
 | monkeys               | 1     |
-| comp list size (23)   | 1     |
+| comp list size (23+)  | 1     |
 | comp_telefrag         | 1     |
 | comp_dropoff          | 1     |
 | comp_vile             | 1     |
@@ -562,6 +566,10 @@ Summary of comp flags since mbf in pr+ and changes:
 | comp_soul             | 1     |
 | comp_ledgeblock       | 1     |
 | comp_friendlyspawn    | 1     |
+| comp_voodooscroller   | 1     |
+
+- The comp list size is variable - take care when reading demos.
+  - If the comp list size is <24, then comp_voodooscroller equals 1.
 
 #### Fixes / adjustments since mbf
 - Fix 3 key door bug
