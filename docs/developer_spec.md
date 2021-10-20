@@ -484,7 +484,7 @@ MBF21 defaults:
 - comp_voodooscroller: [PR](https://github.com/kraflab/dsda-doom/pull/81)
   - When on: voodoo dolls on slow scrollers move too slowly
   - When off: voodoo dolls move the same speed as the floor
-- comp_reservedlineflag: [commit](https://github.com/kraflab/dsda-doom/commit/5287a80982ce290a035a8fe0aa3e35582ca119cb)
+- comp_reservedlineflag: [commit](https://github.com/kraflab/dsda-doom/commit/5287a80982ce290a035a8fe0aa3e35582ca119cb), [commit](https://github.com/kraflab/dsda-doom/commit/ee84aef86f3d9005d30f330666e3c172f785c819)
   - When on: the line flag 0x0800 clears extended flags (`flags &= 0x01ff`).
   - When off: the line flag 0x0800 means nothing.
 
