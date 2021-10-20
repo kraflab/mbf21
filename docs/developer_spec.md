@@ -1,4 +1,4 @@
-# MBF21 Developer Spec v1.3
+# MBF21 Developer Spec v1.4
 
 The contents of this file are aimed at developers, with links to relevant code and extra technical details. MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -484,23 +484,27 @@ MBF21 defaults:
 - comp_voodooscroller: [PR](https://github.com/kraflab/dsda-doom/pull/81)
   - When on: voodoo dolls on slow scrollers move too slowly
   - When off: voodoo dolls move the same speed as the floor
+- comp_reservedlineflag: [commit](https://github.com/kraflab/dsda-doom/commit/5287a80982ce290a035a8fe0aa3e35582ca119cb)
+  - When on: the line flag 0x0800 clears extended flags (`flags &= 0x01ff`).
+  - When off: the line flag 0x0800 means nothing.
 
 Summary of comp flags since mbf in pr+ and changes:
 
-| Name                | Index | Default | Description                                    |
-|---------------------|-------|---------|------------------------------------------------|
-| comp_moveblock-     | 19    | 0       | Large negative displacements are mishandled    |
-| comp_respawn*       | 20    | 0       | Creatures with no spawnpoint respawn at (0,0)  |
-| comp_sound-         | 21    | 0       | Assorted sound errors                          |
-| comp_666-           | 22    | 0       | Buggy pre-udoom boss checks                    |
-| comp_soul*          | 23    | 0       | Lost souls do not bounce                       |
-| comp_maskedanim-    | 24    | 0       | Two-sided midtextures don't animate            |
-| comp_ouchface-      | 25    | 0       | Buggy vanilla ouchface code                    |
-| comp_maxhealth-     | 26    | 0       | Max health in deh only applies to potions      |
-| comp_translucency-  | 27    | 0       | Disable some predefined translucency           |
-| comp_ledgeblock     | 28    | 1       | Ledges block ground enemies                    |
-| comp_friendlyspawn  | 29    | 1       | A_Spawn new thing inherits friendliness        |
-| comp_voodooscroller | 30    | 0       | Voodoo dolls on slow scrollers move too slowly |
+| Name                  | Index | Default | Description                                    |
+|-----------------------|-------|---------|------------------------------------------------|
+| comp_moveblock-       | 19    | 0       | Large negative displacements are mishandled    |
+| comp_respawn*         | 20    | 0       | Creatures with no spawnpoint respawn at (0,0)  |
+| comp_sound-           | 21    | 0       | Assorted sound errors                          |
+| comp_666-             | 22    | 0       | Buggy pre-udoom boss checks                    |
+| comp_soul*            | 23    | 0       | Lost souls do not bounce                       |
+| comp_maskedanim-      | 24    | 0       | Two-sided midtextures don't animate            |
+| comp_ouchface-        | 25    | 0       | Buggy vanilla ouchface code                    |
+| comp_maxhealth-       | 26    | 0       | Max health in deh only applies to potions      |
+| comp_translucency-    | 27    | 0       | Disable some predefined translucency           |
+| comp_ledgeblock       | 28    | 1       | Ledges block ground enemies                    |
+| comp_friendlyspawn    | 29    | 1       | A_Spawn new thing inherits friendliness        |
+| comp_voodooscroller   | 30    | 0       | Voodoo dolls on slow scrollers move too slowly |
+| comp_reservedlineflag | 31    | 1       | Line flag 0x0800 clears extended flags         |
 
 - Comp options marked with a `-` have been deoptionalized in mbf21 (forced to `0`). Many of these have nothing to do with demo compatibility - others are simple bug fixes.
 - Comp options marked with a `*` are already implemented in EE.
@@ -567,9 +571,11 @@ Summary of comp flags since mbf in pr+ and changes:
 | comp_ledgeblock       | 1     |
 | comp_friendlyspawn    | 1     |
 | comp_voodooscroller   | 1     |
+| comp_reservedlineflag | 1     |
 
 - The comp list size is variable - take care when reading demos.
   - If the comp list size is <24, then comp_voodooscroller equals 1.
+  - If the comp list size is <25, then comp_reservedlineflag equals 0.
 
 #### Fixes / adjustments since mbf
 - Fix 3 key door bug

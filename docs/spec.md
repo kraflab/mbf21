@@ -1,4 +1,4 @@
-# MBF21 Specification v1.3
+# MBF21 Specification v1.4
 
 MBF21 supports the full spec of boom & mbf, plus the following.
 
@@ -469,6 +469,9 @@ MBF21 defaults:
 - comp_voodooscroller:
   - When on: voodoo dolls on slow scrollers move too slowly
   - When off (default): voodoo dolls move the same speed as the floor
+- comp_reservedlineflag:
+  - When on: the line flag 0x0800 clears extended flags.
+  - When off: the line flag 0x0800 means nothing.
 
 #### Option default changes
 - comp_pursuit: 1 (was 0)

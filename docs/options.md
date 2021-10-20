@@ -39,6 +39,7 @@ The OPTIONS lump (originally from mbf) allows wad authors to set a series of var
 | comp_ledgeblock       | Monsters are blocked by ledges (except when scrolling)         |
 | comp_friendlyspawn    | Spawned things inherit the friend attribute from the source    |
 | comp_voodooscroller   | Voodoo dolls on slow scrollers move too slowly                 |
+| comp_reservedlineflag | The line flag 0x0800 disables extended flags                   |
 
 ### MBF21 Defaults
 
@@ -81,6 +82,7 @@ comp_soul 0
 comp_ledgeblock 1
 comp_friendlyspawn 1
 comp_voodooscroller 0
+comp_reservedlineflag 1
 ```
 
 ### MBF Defaults
@@ -123,6 +125,7 @@ comp_soul 1
 comp_ledgeblock 0
 comp_friendlyspawn 1
 comp_voodooscroller 1
+comp_reservedlineflag 1
 ```
 
 ### Boom
@@ -165,6 +168,7 @@ comp_soul 1
 comp_ledgeblock 0
 comp_friendlyspawn 1
 comp_voodooscroller 0
+comp_reservedlineflag 1
 ```
 
 ### Doom 2
@@ -207,6 +211,7 @@ comp_soul 1
 comp_ledgeblock 1
 comp_friendlyspawn 1
 comp_voodooscroller 0
+comp_reservedlineflag 1
 ```
 
 ### Ultimate Doom
@@ -249,4 +254,5 @@ comp_soul 1
 comp_ledgeblock 1
 comp_friendlyspawn 1
 comp_voodooscroller 0
+comp_reservedlineflag 1
 ```
